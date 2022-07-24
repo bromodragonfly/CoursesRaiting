@@ -1,6 +1,23 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+module.exports = {
+  webpack(config, options) {
+    config.module.rules.push({
+      loader: "@svgr/webpack",
+      options: {
+        prettier: false,
+        svgo: true,
+        svgoConfig: {
+          plugins: [
+            {
+              name: "removeViewBox",
+              active: false,
+            },
+          ],
+        },
+        titleProp: true,
+      },
+      test: /\.svg$/,
+    });
 
-module.exports = nextConfig
+    return config;
+  },
+};

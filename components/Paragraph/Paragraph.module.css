@@ -1,0 +1,16 @@
+.p {
+  margin: 0;
+  font-weight: 400;
+}
+.p_medium {
+  font-size: 16px;
+  line-height: 150%;
+}
+.p_small {
+  font-size: 14px;
+  line-height: 171%;
+}
+.p_large {
+  font-size: 18px;
+  line-height: 161%;
+}
